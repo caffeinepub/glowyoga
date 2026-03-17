@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.875rem;
+
+    /* Warm cream background */
+    --background: 0.962 0.018 85;
+    --foreground: 0.145 0.01 40;
+
+    /* Card / section beige */
+    --card: 0.935 0.026 78;
+    --card-foreground: 0.145 0.01 40;
+
+    --popover: 0.962 0.018 85;
+    --popover-foreground: 0.145 0.01 40;
+
+    /* Caramel primary */
+    --primary: 0.62 0.12 55;
+    --primary-foreground: 0.98 0.005 80;
+
+    /* Warm sand secondary */
+    --secondary: 0.908 0.034 78;
+    --secondary-foreground: 0.35 0.07 50;
+
+    /* Muted beige */
+    --muted: 0.908 0.025 80;
+    --muted-foreground: 0.52 0.04 60;
+
+    /* Accent caramel */
+    --accent: 0.668 0.12 58;
+    --accent-foreground: 0.98 0.005 80;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Sand border */
+    --border: 0.866 0.03 75;
+    --input: 0.866 0.03 75;
+    --ring: 0.62 0.12 55;
+
+    /* Deep warm brown */
+    --deep-brown: 0.452 0.1 55;
+    /* Muted brown */
+    --warm-brown: 0.472 0.065 60;
+    /* Leopard tan */
+    --leopard-tan: 0.775 0.082 68;
+    /* Leopard spots */
+    --leopard-dark: 0.155 0.02 50;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.935 0.026 78;
+    --sidebar-foreground: 0.145 0.01 40;
+    --sidebar-primary: 0.62 0.12 55;
+    --sidebar-primary-foreground: 0.98 0.005 80;
+    --sidebar-accent: 0.908 0.034 78;
+    --sidebar-accent-foreground: 0.35 0.07 50;
+    --sidebar-border: 0.866 0.03 75;
+    --sidebar-ring: 0.62 0.12 55;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Figtree", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer components {
+  /* Leopard print decorative accent */
+  .leopard-accent {
+    background-color: oklch(var(--leopard-tan));
+    background-image:
+      radial-gradient(
+        ellipse 7px 5px at 20% 25%,
+        oklch(var(--leopard-dark)) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 4px 6px at 22% 30%,
+        oklch(var(--leopard-dark)) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 9px 6px at 55% 15%,
+        oklch(var(--leopard-dark)) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 5px 4px at 52% 20%,
+        oklch(var(--leopard-dark)) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 7px 5px at 80% 35%,
+        oklch(var(--leopard-dark)) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 4px 7px at 83% 40%,
+        oklch(var(--leopard-dark)) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 8px 6px at 35% 65%,
+        oklch(var(--leopard-dark)) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 5px 4px at 37% 72%,
+        oklch(var(--leopard-dark)) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 7px 5px at 70% 55%,
+        oklch(var(--leopard-dark)) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 4px 6px at 68% 62%,
+        oklch(var(--leopard-dark)) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 8px 5px at 10% 80%,
+        oklch(var(--leopard-dark)) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 4px 7px at 12% 87%,
+        oklch(var(--leopard-dark)) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 7px 5px at 90% 75%,
+        oklch(var(--leopard-dark)) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 4px 6px at 87% 82%,
+        oklch(var(--leopard-dark)) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 6px 4px at 45% 90%,
+        oklch(var(--leopard-dark)) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 4px 5px at 47% 95%,
+        oklch(var(--leopard-dark)) 50%,
+        transparent 65%
+      );
+    background-size: 120px 120px;
+  }
+
+  .leopard-accent-subtle {
+    background-color: oklch(var(--leopard-tan) / 0.4);
+    background-image:
+      radial-gradient(
+        ellipse 6px 4px at 20% 25%,
+        oklch(var(--leopard-dark) / 0.5) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 3px 5px at 22% 30%,
+        oklch(var(--leopard-dark) / 0.4) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 8px 5px at 55% 15%,
+        oklch(var(--leopard-dark) / 0.5) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 4px 3px at 52% 20%,
+        oklch(var(--leopard-dark) / 0.4) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 6px 4px at 80% 35%,
+        oklch(var(--leopard-dark) / 0.5) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 3px 6px at 83% 40%,
+        oklch(var(--leopard-dark) / 0.4) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 7px 5px at 35% 65%,
+        oklch(var(--leopard-dark) / 0.5) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 4px 3px at 37% 72%,
+        oklch(var(--leopard-dark) / 0.4) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 6px 4px at 70% 55%,
+        oklch(var(--leopard-dark) / 0.5) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 3px 5px at 68% 62%,
+        oklch(var(--leopard-dark) / 0.4) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 7px 4px at 10% 80%,
+        oklch(var(--leopard-dark) / 0.5) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 3px 6px at 12% 87%,
+        oklch(var(--leopard-dark) / 0.4) 50%,
+        transparent 65%
+      ),
+      radial-gradient(
+        ellipse 5px 4px at 90% 75%,
+        oklch(var(--leopard-dark) / 0.5) 60%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 3px 5px at 87% 82%,
+        oklch(var(--leopard-dark) / 0.4) 50%,
+        transparent 65%
+      );
+    background-size: 120px 120px;
+  }
+
+  .pill-btn {
+    @apply rounded-full bg-primary text-primary-foreground px-6 py-2.5 font-semibold text-sm hover:opacity-90 transition-opacity;
+  }
+}
